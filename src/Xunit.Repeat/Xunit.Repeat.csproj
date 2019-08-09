@@ -16,6 +16,7 @@ Repeat attribute to use with Xunit</Description>
     <PackageTags>xunit repeat test csharp dotnet unit</PackageTags>
     <PackageReleaseNotes>Fork from https://github.com/dougcunha/Xunit.Repeat</PackageReleaseNotes>
     <IsPackable>true</IsPackable>
+    <PackageIconUrl>https://github.com/dougcunha/Xunit.Repeat/blob/f6e8bc394c1a9c2df64de393b2938014c261b37a/icone.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
