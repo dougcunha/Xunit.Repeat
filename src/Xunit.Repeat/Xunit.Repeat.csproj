@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <PackageId>Xunit.Repeat.Standard</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>dougcunha</Authors>
+    <Company>dougcunha</Company>
+    <Description>**This package is a fork from https://github.com/MarcolinoPT/Xunit.Repeat**
+This is a Standard2.0 version of the package Xunit.Repeat.
+Repeat attribute to use with Xunit</Description>
+    <Copyright>Copyright 2019</Copyright>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/dougcunha/Xunit.Repeat</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dougcunha/Xunit.Repeat</RepositoryUrl>
+    <PackageTags>xunit repeat test csharp dotnet unit</PackageTags>
+    <PackageReleaseNotes>Fork from https://github.com/dougcunha/Xunit.Repeat</PackageReleaseNotes>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.core" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

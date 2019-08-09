@@ -7,22 +7,23 @@
     [TestCaseOrderer(ordererTypeName: PriorityOrderer.Name, ordererAssemblyName: PriorityOrderer.Assembly)]
     public class IntegrationTests
     {
-        private const int RepeatCount = 10;
-        private static int Counter;
+        private const int REPEAT_COUNT = 10;
+        private static int _counter;
 
         [Theory(DisplayName = "It should repeat the test"), Priority(1)]
-        [Repeat(RepeatCount)]
-        public void It_should_repeat_the_test(int interationNumber)
+        [Repeat(REPEAT_COUNT)]
+        public void It_Should_Repeat_The_Test(int interationNumber)
         {
-            ++Counter;
+            interationNumber.Should().BeGreaterOrEqualTo(0);
+            ++_counter;
         }
 
         [Fact(DisplayName = "It should have repeated the test"), Priority(2)]
-        public void It_should_have_repeated_the_test()
+        public void It_Should_Have_Repeated_The_Test()
         {
-            Counter
+            _counter
                 .Should()
-                .Be(RepeatCount);
+                .Be(REPEAT_COUNT);
         }
     }
 }

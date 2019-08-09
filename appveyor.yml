@@ -1,0 +1,29 @@
+version: 1.1.1.{build}
+image: Visual Studio 2017
+configuration: Release
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+
+assembly_info:
+  patch: false
+
+before_build:
+  - cmd: nuget restore
+
+build:
+  project: xUnit.Repeat.sln
+  publish_nuget: true
+  verbosity: minimal
+
+test:
+  assemblies:
+    only:
+    - xUnit.Repeat.Tests.dll
+
